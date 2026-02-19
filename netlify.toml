@@ -1,7 +1,11 @@
 [build]
 publish = "my-site/public"
-command = 'cd my-site && echo -e "\ngoogleAnalytics: $GOOGLE_ANALYTICS \ndisqusShortname: $DISQUS_SHORTNAME \n" >> config.yaml && hugo --gc --minify --themesDir ../..'
-
+command = """
+cd my-site &&
+[ -n "$GOOGLE_ANALYTICS" ] && echo "googleAnalytics: \"$GOOGLE_ANALYTICS\"" >> config.yaml ;
+[ -n "$DISQUS_SHORTNAME" ] && echo "disqusShortname: \"$DISQUS_SHORTNAME\"" >> config.yaml ;
+hugo --gc --minify --themesDir ../..
+"""
 [context.production.environment]
 HUGO_VERSION = "0.143.0"
 HUGO_ENV = "production"
