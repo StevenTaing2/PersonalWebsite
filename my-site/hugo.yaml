@@ -218,7 +218,7 @@ params:
           
       - title: Fitness Tracking App
         content: Developed a cross-platform mobile app with a React Native framework, Expo, powered by Supabase (PostgreSQL database, RESTful APIs, authentication, and real-time subscriptions), integrating dynamic graph visualizations and scalable backend architecture.
-        image: /images/projects/converter.jpg
+        image: /images/homepage.png
         # featured:
         #   name: Demo
         #   link: https://django-converter.herokuapp.com
@@ -231,7 +231,7 @@ params:
 
       - title: UTR Web Application
         content: "Collaborated with a team of 7 people to build a customer-focused web application that streamlines fuel payments and food ordering across multiple petrol stations and convenience stores."
-        image: /images/projects/profile2.jpg
+        image: /images/UTRmenu.png
         badges:
           - "HTML"
           - "CSS"
