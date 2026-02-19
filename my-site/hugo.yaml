@@ -306,8 +306,7 @@ params:
         jobs:
           - name: "Student"
             date: "November 2025 - February 2026"
-            content:
-              	"Actively participated in an intensive collaborative course led by volunteers who are in graduate or internship positions at big tech or HFT companies. The course involved a comprehensive theory study on DSA, as well as applying technical problem-solving skills to DSA, OOD and system design problems.
+            content: "Actively participated in an intensive collaborative course led by volunteers who are in graduate or internship positions at big tech or HFT companies. The course involved a comprehensive theory study on DSA, as well as applying technical problem-solving skills to DSA, OOD and system design problems.
                 - Solved over 140+ problems and committed a minimum of 30 hours a week to improve and consolidate knowledge"
 
       - company: "AUCPL"
