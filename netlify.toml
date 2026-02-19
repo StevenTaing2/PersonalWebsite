@@ -31,3 +31,6 @@ command = "cd my-site && hugo --gc --minify --themesDir themes -b $DEPLOY_PRIME_
 [context.branch-deploy.environment]
 HUGO_VERSION = "0.143.0"
 
+
+[build.environment]
+GIT_SUBMODULE_STRATEGY = "recursive"
