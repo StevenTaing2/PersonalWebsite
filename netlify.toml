@@ -2,11 +2,13 @@
 publish = "my-site/public" # Ensure this matches your Hugo output directory
 command = "cd my-site && hugo --gc --minify --enableGitInfo --themesDir themes"
 
+[context.next.environment]
+HUGO_ENABLEGITINFO = "true"
 [context.production.environment]
 HUGO_VERSION = "0.143.0"
 HUGO_ENV = "production"
 HUGO_ENABLEGITINFO = "true"
-HUGO_THEME = "hugo-profile" # Ensure this matches your theme name
+HUGO_THEME = "hugo-profile"
 
 [context.split1]
 command = "cd my-site && hugo --gc --minify --enableGitInfo --themesDir ../.."
@@ -29,5 +31,6 @@ command = "cd my-site && hugo --gc --minify --themesDir themes -b $DEPLOY_PRIME_
 [context.branch-deploy.environment]
 HUGO_VERSION = "0.143.0"
 
-[context.next.environment]
-HUGO_ENABLEGITINFO = "true"
+
+[build.environment]
+GIT_SUBMODULE_STRATEGY = "recursive"
