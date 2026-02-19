@@ -1,6 +1,6 @@
 [build]
-publish = "my-site/public" # Ensure this matches your Hugo output directory
-command = "cd my-site && hugo --gc --minify --enableGitInfo --themesDir themes"
+publish = "my-site/public"
+command = "cd my-site && hugo --gc --minify --enableGitInfo"
 
 [context.next.environment]
 HUGO_ENABLEGITINFO = "true"
@@ -11,7 +11,7 @@ HUGO_ENABLEGITINFO = "true"
 HUGO_THEME = "hugo-profile"
 
 [context.split1]
-command = "cd my-site && hugo --gc --minify --enableGitInfo --themesDir ../.."
+command = "cd my-site && hugo --gc --minify --enableGitInfo"
 
 [context.split1.environment]
 HUGO_VERSION = "0.143.0"
@@ -19,14 +19,14 @@ HUGO_ENV = "production"
 HUGO_THEME = "hugo-profile"
 
 [context.deploy-preview]
-command = "cd my-site && hugo --gc --minify --buildFuture --themesDir themes -b $DEPLOY_PRIME_URL"
+command = "cd my-site && hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL"
 
 [context.deploy-preview.environment]
 HUGO_VERSION = "0.143.0"
 HUGO_THEME = "hugo-profile"
 
 [context.branch-deploy]
-command = "cd my-site && hugo --gc --minify --themesDir themes -b $DEPLOY_PRIME_URL"
+command = "cd my-site && hugo --gc --minify -b $DEPLOY_PRIME_URL"
 
 [context.branch-deploy.environment]
 HUGO_VERSION = "0.143.0"
