@@ -1,0 +1,415 @@
+baseURL: "https://hugo-profile.netlify.app"
+languageCode: "en-us"
+title: "Steven's Portfolio Website"
+theme: hugo-profile
+
+# Multilingual configuration
+defaultContentLanguage: "en"
+
+languages:
+  en:
+    languageName: "English"
+    weight: 1
+    contentDir: "content"
+    # menu:
+    #   main:
+    #     - identifier: blog
+    #       name: Blog
+    #       title: Blog posts
+    #       url: /blogs
+    #       weight: 1
+    #     - identifier: gallery
+    #       name: Gallery
+    #       title: Image gallery
+    #       url: /gallery
+    #       weight: 2
+  
+
+outputs:
+  home:
+    - "HTML"
+    - "RSS"
+    - "JSON"
+  page:
+    - "HTML"
+    - "RSS"
+
+enableRobotsTXT: true
+
+#services:
+  #googleAnalytics:
+    #id: G-MEASUREMENT_ID
+  #disqus:
+    #shortname: your-disqus-shortname
+
+pagination:
+  pagerSize: 3
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+Menus:
+  main:
+    - identifier: projects
+      name: Projects
+      title: Projects
+      url: /#projects
+      weight: 1
+    - identifier: techstack
+      name: Languages, Frameworks and Tools
+      title: Languages, Frameworks and Tools
+      url: /#techstack
+      weight: 2
+    - identifier: experience
+      name: Work Experience and Community Involvement
+      title: Work Experience and Community Involvement
+      url: /#experience
+      weight: 3
+    - identifier: education
+      name: Education
+      title: Education
+      url: /#education
+      weight: 4
+  #   - identifier: gallery
+  #     name: Gallery
+  #     title: Gallery
+  #     url: /gallery
+  #     weight: 2
+    #Dropdown menu
+    # - identifier: dropdown
+    #   title: Example dropdown menu
+    #   name: Dropdown
+    #   weight: 3
+    # - identifier: dropdown1
+    #   title: example dropdown 1
+    #   name: example 1
+    #   url: /#
+    #   parent: dropdown
+    #   weight: 1
+    # - identifier: dropdown2
+    #   title: example dropdown 2
+    #   name: example 2
+    #   url: /#
+    #   parent: dropdown
+    #   weight: 2
+
+params:
+  title: "Steven's Portfolio Website"
+  description: Reach out to me pls. I want to be employed!
+  # staticPath: ""  # The path to serve the static files from
+  
+
+  # Whether to serve bootstrap css and js files from CDN or not. Can be set to true, "css" or "js" to choose between
+  # serving both, only the css, or only the js files through the CDN. Any other value will make so that CDN is not used.
+  # Note the lack of "" in true, it should be of boolean type.
+  useBootstrapCDN: false
+
+  # If you want to load dynamically responsive images from Cloudinary
+  # This requires your images to be uploaded + hosted on Cloudinary
+  # Uncomment and change YOUR_CLOUD_NAME to the Cloud Name in your Cloudinary console
+  # cloudinary_cloud_name: "YOUR_CLOUD_NAME"
+
+  # Whether to add mathjax support on all pages. Alternatively, you can opt-in per page by adding `mathjax: true` in the frontmatter.
+  mathjax: false
+
+  # Whether the fade animations on the home page will be enabled
+  animate: true
+
+  theme:
+    # disableThemeToggle: true
+    # defaultTheme: "light" # dark
+
+  font:
+    fontSize: 1rem # default: 1rem
+    fontWeight: 400 # default: 400
+    lineHeight: 1.5 # default: 1.5
+    textAlign: left # default: left
+
+  # color preference
+  # When using hex codes for colors, quotations must be used along with the # sign
+  # color:
+  #   textColor: "#343a40"
+  #   secondaryTextColor: "#6c757d"
+  #   textLinkColor: "#007bff"
+  #   backgroundColor: "#eaedf0"
+  #   secondaryBackgroundColor: "#64ffda1a"
+  #   primaryColor: "#007bff"
+  #   secondaryColor: "#f8f9fa"
+
+  #   darkmode:
+  #     textColor: "#e4e6eb"
+  #     secondaryTextColor: "#b0b3b8"
+  #     textLinkColor: "#ffffff"
+  #     backgroundColor: "#18191a"
+  #     secondaryBackgroundColor: "#212529"
+  #     primaryColor: "#ffffff"
+  #     secondaryColor: "#212529"
+
+  # If you want to customize the menu, you can change it here
+  navbar:
+    align: ms-auto # Left: ms-auto | center: mx-auto | right: me-auto | Default: ms-auto
+    # brandLogo: "/logo.png" # Logo for the brand | default is the favicon variable
+    # showBrandLogo: false # Show brand logo in nav bar | default is true
+    brandName: "Steven's Portfolio Website" # Brand name for the brand | default is the title variable
+    disableSearch: true
+    # searchPlaceholder: "Search"
+    stickyNavBar:
+      enable : true
+      showOnScrollUp : true
+    enableSeparator: false
+    menus:
+      disableProjects: true
+      disableContact: true
+      disableAbout: true
+      disableExperience: true
+      disableEducation: true
+      disableAchievements: true
+      
+
+  # Hero
+  hero:
+    enable: true
+    # intro: "Hi, my name is"
+    title: "Steven Taing"
+    # subtitle: "I build things for the web"
+    content: "I am a third year Bachelor of Software Engineering (Honours) student at Adelaide University, where I am enhancing my current programming skills.
+        \n I have completed both solo and team projects outside of my university classes and I am keen to learn more about all things tech! My current interests in programming are system design, optimising low latency code and competitive programming.
+        \n Feel free to reach out as I love to meet new like-minded individuals!"
+    image: /images/headshot.jpeg
+    bottomImage:
+      enable: true
+    # roundImage: true # Make hero image circular | default false
+    button:
+      enable: true
+      name: "Resume"
+      url: "#"
+      download: true
+      newPage: false
+    socialLinks:
+      fontAwesomeIcons:
+        - icon: fa fa-envelope
+          url: mailto:steven.taing22@gmail.com
+        - icon: fab fa-github
+          url: https://github.com/StevenTaing2
+        - icon: fab fa-linkedin
+          url: https://www.linkedin.com/in/steven-taing/
+
+
+  # projects
+  projects:
+    enable: true
+    # title: "Custom Name"
+    items:
+      - title: Custom RAII Scope Based Profiler
+        content: Designed and implemented a low-overhead, thread-safe, allocation-free C++ CPU scope profiler using RAII for scope timing. Generated Chrome Trace-compatible JSON output for visualizing nested scopes and multithreaded timelines.
+
+        image: /images/chrometraceoutput.png
+        # featured:
+        #   name: Demo
+        #   link: https://hugo-profile.netlify.app
+        badges:
+          - "C++"
+          - "MakeFile"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/StevenTaing2/custom_profiler
+          
+      - title: Fitness Tracking App
+        content: Developed a cross-platform mobile app with a React Native framework, Expo, powered by Supabase (PostgreSQL database, RESTful APIs, authentication, and real-time subscriptions), integrating dynamic graph visualizations and scalable backend architecture.
+        image: /images/projects/converter.jpg
+        # featured:
+        #   name: Demo
+        #   link: https://django-converter.herokuapp.com
+        badges:
+          - "Expo"
+          - "Supabase"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/SorrinvaTaing/ThatFitnessApp
+
+      - title: UTR Web Application
+        content: "Collaborated with a team of 7 people to build a customer-focused web application that streamlines fuel payments and food ordering across multiple petrol stations and convenience stores."
+        image: /images/projects/profile2.jpg
+        badges:
+          - "HTML"
+          - "CSS"
+          - "Javascript"
+          - "C#"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/alisharifipx/UTR_Web_App
+      
+      - title: Optimal Game Theory Poker Engine
+        content: "Coming soon..."
+        image: /images/projects/profile2.jpg
+        badges:
+          - "Python"
+          - "FastAPI"
+          - "PostgreSQL"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/StevenTaing2/Poker-Engine
+
+  
+  #Contact
+  contact:
+    enable: true
+    title: "Languages, Frameworks and Technologies"
+    content: "Languages: C++, Python, Java, HTML, CSS, JavaScript, TypeScript, C, SQL, C# \n
+      Frameworks & Technologies: React, React Native, Node.js, ASP.NET, Tailwind CSS, Expo, MySQL, PostgreSQL, Supabase, Git, Docker, Linux"
+    # formspree:
+    #   enable: true # `contact.email` value will be ignored
+    #   formId: abcdefgh # Take it from your form's endpoint, like 'https://formspree.io/f/abcdefgh'
+    #   emailCaption: "Enter your email address"
+    #   messageCaption: "Enter your message here"
+    #   messageRows: 5
+
+  # About
+  about:
+    enable: false
+    title: "About Me"
+    image: "/images/me.png"
+    content: |-
+      I am a software developer with a passion for web development. I have a background in computer science and mathematics, and I have a strong interest in the intersection of technology and art. I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA.
+
+      I am currently working on a project that will be used to help people find the best way to get around the city.
+    skills:
+      enable: true
+      title: "Here are a few technologies I've been working with recently:"
+      items:
+        - "C++"
+        - "Python"
+        - "JavaScript"
+        - "React"
+        - "Node"
+        - "Express"
+
+  # Experience
+  experience:
+    enable: true
+    title: "Work Experience and Community Involvement"
+    items:
+      - company: "Adelaide University"
+        companyUrl: "https://adelaideuni.edu.au/"
+        jobs:
+          - name: "Information Technologist"
+            date: "August 2024 - December 2025"
+            content: "Worked as an Information Technologist for Adelaide University where I was responsible for:
+              -	Delivered high-quality IT Help Desk support to staff and students, resolving technical incidents, deployed hardware and completed service requests across diverse IT, AV, and telephony systems.	
+              -	Conducted hundreds of AV audits across 3 university campuses to ensure equipment functionality
+              -	Oversaw IT equipment management, including assembly, configuration, imaging and decommissioning within MSM, Microsoft Power BI and Service Desk software."
+            
+      - company: "Ravi's Study Program"
+        companyUrl: "https://rsp.org.au/"
+        jobs:
+          - name: "Student"
+            date: "November 2025 - February 2026"
+            content:
+              	"Actively participated in an intensive collaborative course led by volunteers who are in graduate or internship positions at big tech or HFT companies. The course involved a comprehensive theory study on DSA, as well as applying technical problem-solving skills to DSA, OOD and system design problems.
+                - Solved over 140+ problems and committed a minimum of 30 hours a week to improve and consolidate knowledge"
+
+      - company: "AUCPL"
+        companyUrl: "http://aucpl.com"
+        jobs: 
+        - name: "Team member"
+          date: "July 2025 - October 2025"
+          
+          content: "
+              - Competed in an ICPC formatted programming competitions hosted by the Adelaide Competitive Programming Club and sponsored by Jane Street, working within a team of 3.
+              "
+      - company: "42Adelaide"
+        companyUrl: 
+        jobs:
+        - name: "Student"
+          date: "January 2024 - February 2024"
+          content: |
+            -	Completed an intensive coding bootcamp using C to solve low-level algorithmic coding problems
+            -	Assessed and evaluated other students on their algorithmic approach to problems 
+
+
+  # Education
+  education:
+    enable: true
+    # title: "Custom Name"
+    index: false
+    items:
+      - title: "Bachelor of Software Engineering (Honours)"
+        school:
+          name: "Adelaide University, South Australia (previously University of South Australia)"
+          url: "https://adelaideuni.edu.au/"
+        date: "2023 - 2027"
+        GPA: "5.8 out of 7.0"
+        content: |-
+          Awards 
+           - University of South Australia Merit Award | Awarded to the top 15% academically performing students 
+      
+
+  # Achievements
+  achievements:
+    enable: false
+    # title: "Custom Name"
+    items:
+      - title: Google kickstart runner
+        content: I solved all problems with optimal solution.
+        url: https://example.com
+        image: /images/achievement.jpg
+      - title: Facebook Hackathon Winner
+        content: Developed a product using Artificial Intelligence.
+        image: /images/achievement.jpg
+      - title: Hugo Profile
+        content: Developed a theme and getting 1K+ downloads per month.
+        url: "https://github.com/gurusabarish/hugo-profile"
+        image: /images/achievement.jpg
+      - title: Microsoft Imagine Runner
+        content: We are developed a product which can help others.
+      - title: Google Summer of Code
+        content: Contributed to a open source project.
+        url: https://example.com
+
+  
+
+  # footer:
+  #   recentPosts:
+  #     path: "blogs"
+  #     count: 3
+  #     title: Recent Posts
+  #     enable: false
+  #     disableFeaturedImage: false
+  #   socialNetworks:
+  #     github: https://github.com
+  #     linkedin: https://linkedin.com
+  #     twitter: https://twitter.com
+  #     instagram: https://instagram.com
+  #     facebook: https://facebook.com
+
+  # List pages like blogs and posts
+  listPages:
+    disableFeaturedImage: false
+
+  # Single pages like blog and post
+  singlePages:
+    socialShare: true
+    readTime:
+      enable: true
+      content: "min read"
+    scrollprogress:
+      enable: true
+    tags:
+      openInNewTab: true
+
+  # For translations
+  terms:
+    read: "Read"
+    toc: "Table Of Contents"
+    copyright: "All rights reserved"
+    emailText: "Check out this site"
+
+  datesFormat:
+    article: "Jan 2, 2006"
+    articleList: "Jan 2, 2006"
+    articleRecent: "Jan 2, 2006"
+
+  #customScripts: -| # You can add custom scripts which will be added before </body> tag
+  #  <script type="text/javascript"><!-- any script here --></script>
