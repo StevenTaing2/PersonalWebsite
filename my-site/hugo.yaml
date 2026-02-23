@@ -58,8 +58,8 @@ Menus:
       url: /#projects
       weight: 1
     - identifier: techstack
-      name: Languages, Frameworks and Tools
-      title: Languages, Frameworks and Tools
+      name: Languages, Frameworks and Tech
+      title: Languages, Frameworks and Tech
       url: /#techstack
       weight: 2
     - identifier: experience
@@ -174,8 +174,8 @@ params:
     # intro: "Hi, my name is"
     title: "Steven Taing"
     # subtitle: "I build things for the web"
-    content: "I am a third year Bachelor of Software Engineering (Honours) student at Adelaide University, where I am enhancing my current programming skills.
-        \n I have completed both solo and team projects outside of my university classes and I am keen to learn more about all things tech! My current interests in programming are system design, optimising low latency code and competitive programming.
+    content: "I am a third year Bachelor of Software Engineering (Honours) student at Adelaide University, where I am enhancing my current programming skills. \n
+         \nI have completed both solo and team projects outside of my university classes and I am keen to learn more about all things tech! My current interests in programming are system design, optimising low latency code and competitive programming.
         \n Feel free to reach out as I love to meet new like-minded individuals!"
     image: /images/headshot.jpeg
     bottomImage:
@@ -204,7 +204,7 @@ params:
     items:
       - title: Custom RAII Scope Based Profiler
         content: Designed and implemented a low-overhead, thread-safe, allocation-free C++ CPU scope profiler using RAII for scope timing. Generated Chrome Trace-compatible JSON output for visualizing nested scopes and multithreaded timelines.
-
+        url: https://github.com/StevenTaing2/custom_profiler
         image: /images/chrometraceoutput.png
         # featured:
         #   name: Demo
@@ -218,6 +218,7 @@ params:
           
       - title: Fitness Tracking App
         content: Developed a cross-platform mobile app with a React Native framework, Expo, powered by Supabase (PostgreSQL database, RESTful APIs, authentication, and real-time subscriptions), integrating dynamic graph visualizations and scalable backend architecture.
+        url: https://github.com/SorrinvaTaing/ThatFitnessApp
         image: /images/homepage.png
         # featured:
         #   name: Demo
@@ -231,6 +232,7 @@ params:
 
       - title: UTR Web Application
         content: "Collaborated with a team of 7 people to build a customer-focused web application that streamlines fuel payments and food ordering across multiple petrol stations and convenience stores."
+        url: https://github.com/alisharifipx/UTR_Web_App
         image: /images/UTRmenu.png
         badges:
           - "HTML"
@@ -243,6 +245,7 @@ params:
       
       - title: Optimal Game Theory Poker Engine
         content: "Coming soon..."
+        url: https://github.com/StevenTaing2/Poker-Engine
         image: /images/projects/profile2.jpg
         badges:
           - "Python"
@@ -339,7 +342,7 @@ params:
           name: "Adelaide University, South Australia (previously University of South Australia)"
           url: "https://adelaideuni.edu.au/"
         date: "2023 - 2027"
-        GPA: "5.8 out of 7.0"
+        # GPA: "5.8 out of 7.0"
         content: |-
           Awards 
            - University of South Australia Merit Award | Awarded to the top 15% academically performing students 
